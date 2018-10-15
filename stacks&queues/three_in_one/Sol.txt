@@ -1,0 +1,10 @@
+Create a class with an array attribute being. "Partition" it in three equal partition,
+using 6  indices: first_top_index
+first_upper_limit, middle_top_index, middle_upper_limit etc..
+Adding a new element happens on the
+top_*_index positions, as well as the
+removing. When top_*_index reaches *_upper_l
+element the respective stack is full.
+Removing elements happens from the *_top_index position and a index having value
+ -1 represents that the respective stack is empty.
+
