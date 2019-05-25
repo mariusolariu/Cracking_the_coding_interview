@@ -14,6 +14,8 @@ public class TrieNode{
 		children = new ArrayList<>();
 	} 
 
+	/** adds the other node as a child if it doesnt exist and returns it or returns the node if it exists
+	*/
 	public TrieNode addChildren(TrieNode other){
 		TrieNode result = null;
 

@@ -18,6 +18,14 @@ public class Tries{
 		current.addChildren(finalNode);
 	}
 
+	/* pass the root of the trie
+	*/
+	public boolean isWordInTrie(Node root, String word){
+		TrieNode result = searchPrefix(root, word);
+		
+		return result != null;
+	}
+
 	//return a refernce to the node where prefix ends
 	public TrieNode searchPrefix(TrieNode n, String prefix){
 		TrieNode result = null;
@@ -35,14 +43,16 @@ public class Tries{
 				}
 		}
 
+		
 		if (i == prefix.length()){
 			result = current;
 		}
+	
 
 		return result;
 	}
 	
-	//a bfs manner
+	//a breadth first search manner
 	public void printGraph(TrieNode n){
 		Queue<TrieNode> queue = new LinkedList<>();
 
@@ -80,9 +90,12 @@ public class Tries{
 		t.addWord(root, w4);
 
 		TrieNode u = t.searchPrefix(root, w5);
+		System.out.println("\n" + u.getChildren());
 
 		t.printGraph(root);
 
-		System.out.println("\n" + u.getChildren());
+		TrieNode exists = t.searchPrefix(root, w1);
+		System.out.println(exists.getChildren().get(0).getChar());
+
 	}
 }
