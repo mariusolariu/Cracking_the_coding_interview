@@ -53,8 +53,7 @@ public class Sol{
 	public static void main(String[] args){
 		int[] arr = new int[]{3, 2, 1};
 
-		Arrays.sort(arr);
-
+		Arrays.fill(arr, 0, 2, 0);
 		for (int i: arr)
 			System.out.println(i);
 
